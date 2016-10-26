@@ -1,6 +1,7 @@
 {
   "name": "zehirpx/laroles",
   "description": "A light permission management for Laravel.",
+  "license": "MIT",
   "keywords": ["laravel", "role", "permission", "authority", "management"],
   "type": "library",
   "require": {
