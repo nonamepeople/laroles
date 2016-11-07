@@ -75,7 +75,7 @@ $user->rolesCan('delete-servers');      // false
 
 #### Check permissions on a Role
 
-You may also with to check for the permissions on a `Role` model by using the `can` method of the model:
+You may also wish to check for the permissions on a `Role` model by using the `can` method of the model:
 
 ```php
 $role->can('create-servers');       // true
