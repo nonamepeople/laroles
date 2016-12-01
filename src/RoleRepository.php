@@ -76,14 +76,8 @@ class RoleRepository
      */
     public function updateUserRoles($user, array $roles = [])
     {
-        $current = $user->roles;
+        $user->roles()->detach();
 
-        $user->roles()->detach(
-            $current->pluck('name')->diff($roles)->values()->toArray()
-        );
-
-        $user->roles()->attach(
-            collect($roles)->diff($current->pluck('name'))->values()->toArray()
-        );
+        $user->roles()->attach($roles);
     }
 }
